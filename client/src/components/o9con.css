@@ -1,0 +1,1365 @@
+/* ============================================================
+ * o9con.css
+ *
+ * GENERATED FILE -- do not edit by hand.
+ * Regenerate via:  pnpm --filter @arvo/assets run o9con:update
+ *
+ * Built from UX icon map (1067 icons) +
+ * config/base.css + config/aliases.json.
+ * ========================================================== */
+
+@font-face {
+  font-family: "o9con";
+  src: url("./o9con.eot?v=2.2.1");
+  src: url("./o9con.eot?v=2.2.1") format("embedded-opentype"),
+       url("./o9con.woff2?v=2.2.1") format("woff2"),
+       url("./o9con.woff?v=2.2.1") format("woff"),
+       url("./o9con.ttf?v=2.2.1") format("truetype"),
+       url("./o9con.svg?v=2.2.1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ============================================================================
+ * o9con base styles
+ *
+ * Hand-maintained source for the static portion of o9con.css. The build
+ * pipeline (`pnpm --filter @arvo/assets run o9con:update`) inlines this file
+ * verbatim between the generated @font-face declaration and the generated
+ * per-icon ::before rules.
+ *
+ * Anything that does NOT depend on the per-icon codepoint table belongs here
+ * (base class, size modifiers, background helpers, list markers, animations,
+ * rotate/flip transforms, icon stacks). Per-icon ::before content is emitted
+ * by the build, not this file.
+ *
+ * Ported from o9.FontIcons/o9con/base/_base-o9con.scss + _mixins-o9con.scss.
+ * The legacy `progid:DXImageTransform` IE6-8 filters have been dropped.
+ * Vendor prefixes are kept where they remain useful for Safari / older
+ * Android browsers.
+ * ========================================================================== */
+
+/*------------------------
+	base class definition
+-------------------------*/
+.o9con {
+  display: inline-block;
+  /* Avoid `font` shorthand -- its font-size fights component __ico rules. */
+  font-family: "o9con";
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*------------------------
+  change icon size
+-------------------------*/
+
+/* relative units */
+.o9con-sz-xs { font-size: 0.75em; }
+.o9con-sz-sm { font-size: 0.875em; }
+.o9con-sz-lg { font-size: 1.33em; }
+.o9con-sz-2x { font-size: 2em; }
+.o9con-sz-3x { font-size: 3em; }
+.o9con-sz-4x { font-size: 4em; }
+.o9con-sz-5x { font-size: 5em; }
+.o9con-sz-6x { font-size: 6em; }
+.o9con-sz-7x { font-size: 7em; }
+.o9con-sz-8x { font-size: 8em; }
+.o9con-sz-9x { font-size: 9em; }
+.o9con-sz-10x { font-size: 10em; }
+
+/* absolute units */
+.o9con-16 { font-size: 16px; }
+.o9con-20 { font-size: 20px; }
+.o9con-24 { font-size: 24px; }
+.o9con-32 { font-size: 32px; }
+.o9con-40 { font-size: 40px; }
+.o9con-48 { font-size: 48px; }
+
+/*----------------------------------
+  add a square/circle background
+-----------------------------------*/
+.o9con-bg-color { background-color: inherit; }
+.o9con-text-color { color: inherit; }
+
+.o9con-bg-sqr,
+.o9con-bg-sqr-smooth,
+.o9con-bg-cir {
+  padding: 0.33em;
+}
+
+.o9con-bg-sqr { border-radius: 0; }
+.o9con-bg-sqr-smooth { border-radius: 0.25em; }
+.o9con-bg-cir { border-radius: 50%; }
+
+.o9con-bg-border {
+  border: solid 1.5px inherit;
+}
+
+/*------------------------------------
+  use icons as list item markers
+-------------------------------------*/
+.o9con-ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.o9con-ul > li {
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+
+.o9con-ul > li > .o9con {
+  margin-right: 0.4em;
+  line-height: inherit;
+}
+
+/*------------------------
+  animated icons
+-------------------------*/
+.o9con-anim-spin {
+  -webkit-animation: o9con-spin 2s infinite linear;
+  animation: o9con-spin 2s infinite linear;
+}
+
+@-webkit-keyframes o9con-spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes o9con-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.o9con-anim-pulse {
+  -webkit-animation: o9con-pulse 1s ease infinite;
+  animation: o9con-pulse 1s ease infinite;
+}
+
+@-webkit-keyframes o9con-pulse {
+  0% { -webkit-transform: scale(1); }
+  50% { -webkit-transform: scale(1.3); }
+  100% { -webkit-transform: scale(1); }
+}
+
+@keyframes o9con-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/*------------------------
+  rotated/flipped icons
+-------------------------*/
+.o9con-rotate-45 { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.o9con-rotate-90 { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+.o9con-rotate-135 { -webkit-transform: rotate(135deg); transform: rotate(135deg); }
+.o9con-rotate-180 { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.o9con-rotate-225 { -webkit-transform: rotate(225deg); transform: rotate(225deg); }
+.o9con-rotate-270 { -webkit-transform: rotate(270deg); transform: rotate(270deg); }
+.o9con-rotate-315 { -webkit-transform: rotate(315deg); transform: rotate(315deg); }
+
+.o9con-flip-x { -webkit-transform: scale(-1, 1); transform: scale(-1, 1); }
+.o9con-flip-y { -webkit-transform: scale(1, -1); transform: scale(1, -1); }
+
+/*--------------------------------------
+  o9con icons stack
+-----------------------------------------*/
+.o9con-icons-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+.o9con-stack-1x { line-height: inherit; }
+
+.o9con-stack-1x,
+.o9con-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: auto;
+}
+
+.o9con-stack-2x { font-size: 2em; }
+
+.o9con-inverse { color: #ffffff; }
+
+/* ============================================================
+ * per-icon glyphs (generated from UX icon map)
+ * ========================================================== */
+.o9con-3d-model::before { content: "\ecc9"; }
+.o9con-ELK::before { content: "\ee2a"; }
+.o9con-add-attachment::before { content: "\ed43"; }
+.o9con-add-book::before { content: "\ea87"; }
+.o9con-add-data-node::before { content: "\ed92"; }
+.o9con-add-favorite::before { content: "\ed47"; }
+.o9con-add-pipeline::before { content: "\ed5b"; }
+.o9con-add-presentation::before { content: "\ea9c"; }
+.o9con-add-textbox::before { content: "\eab0"; }
+.o9con-add-to-bag-filled::before { content: "\eda3"; }
+.o9con-add-to-bag-outline::before { content: "\eda2"; }
+.o9con-add-view::before { content: "\ea89"; }
+.o9con-address-book::before { content: "\ebdc"; }
+.o9con-address-card::before { content: "\ecb0"; }
+.o9con-adjust::before { content: "\ec7c"; }
+.o9con-advance-filter::before { content: "\ed57"; }
+.o9con-advance-filter-filled::before { content: "\ed67"; }
+.o9con-airport-tower::before { content: "\ed1f"; }
+.o9con-align-center::before { content: "\eab1"; }
+.o9con-align-justify::before { content: "\eab2"; }
+.o9con-align-left::before { content: "\eac6"; }
+.o9con-align-right::before { content: "\eab5"; }
+.o9con-alphabet-p::before { content: "\ee2f"; }
+.o9con-alphabet-p-filled::before { content: "\ee2e"; }
+.o9con-alphabet-s::before { content: "\ee31"; }
+.o9con-alphabet-s-filled::before { content: "\ee30"; }
+.o9con-ambulance::before { content: "\ec85"; }
+.o9con-american-sign-language-interpreting::before { content: "\ec98"; }
+.o9con-anchor::before { content: "\ecaf"; }
+.o9con-angle-double-down::before { content: "\ea33"; }
+.o9con-angle-double-left::before { content: "\ea37"; }
+.o9con-angle-double-right::before { content: "\ea31"; }
+.o9con-angle-double-up::before { content: "\ea2d"; }
+.o9con-angle-down::before { content: "\ea36"; }
+.o9con-angle-left::before { content: "\ea35"; }
+.o9con-angle-right::before { content: "\ea34"; }
+.o9con-angle-up::before { content: "\ea03"; }
+.o9con-antenna::before { content: "\ebdb"; }
+.o9con-apps::before { content: "\ea86"; }
+.o9con-archive::before { content: "\ecae"; }
+.o9con-archive-alt::before { content: "\eaf2"; }
+.o9con-area-chart::before { content: "\ecb5"; }
+.o9con-area-chart-alt::before { content: "\eb2a"; }
+.o9con-area-chart-xy::before { content: "\ec25"; }
+.o9con-arrow-circle-down::before { content: "\ea32"; }
+.o9con-arrow-circle-left::before { content: "\ea02"; }
+.o9con-arrow-circle-o-down::before { content: "\ea30"; }
+.o9con-arrow-circle-o-left::before { content: "\ea2f"; }
+.o9con-arrow-circle-o-right::before { content: "\ea2e"; }
+.o9con-arrow-circle-o-up::before { content: "\ea29"; }
+.o9con-arrow-circle-right::before { content: "\ea2c"; }
+.o9con-arrow-circle-up::before { content: "\ea2b"; }
+.o9con-arrow-down::before { content: "\ea2a"; }
+.o9con-arrow-left::before { content: "\ea0c"; }
+.o9con-arrow-left-down::before { content: "\edcf"; }
+.o9con-arrow-left-up::before { content: "\edd0"; }
+.o9con-arrow-right::before { content: "\ea28"; }
+.o9con-arrow-right-down::before { content: "\edd1"; }
+.o9con-arrow-right-up::before { content: "\edd2"; }
+.o9con-arrow-up::before { content: "\ea27"; }
+.o9con-arrows::before { content: "\ea26"; }
+.o9con-arrows-alt::before { content: "\ea23"; }
+.o9con-arrows-alt-o::before { content: "\ec15"; }
+.o9con-arrows-h::before { content: "\ea25"; }
+.o9con-arrows-o::before { content: "\ec14"; }
+.o9con-arrows-v::before { content: "\ea24"; }
+.o9con-ascending::before { content: "\ee3a"; }
+.o9con-ascending-sort::before { content: "\ee36"; }
+.o9con-assistive-listening-systems::before { content: "\ecc8"; }
+.o9con-asterisk::before { content: "\eb2b"; }
+.o9con-asterisk-alt::before { content: "\eb68"; }
+.o9con-asterisk-o::before { content: "\eb6b"; }
+.o9con-at::before { content: "\eb8b"; }
+.o9con-automobile::before { content: "\ecad"; }
+.o9con-avro::before { content: "\ed55"; }
+.o9con-azure-blobstore::before { content: "\ed54"; }
+.o9con-background-color::before { content: "\eac8"; }
+.o9con-backward::before { content: "\ec23"; }
+.o9con-balance-scale::before { content: "\ecac"; }
+.o9con-ban::before { content: "\eb2c"; }
+.o9con-bandcamp::before { content: "\ecc1"; }
+.o9con-bank::before { content: "\ecab"; }
+.o9con-bar-chart::before { content: "\eb28"; }
+.o9con-bar-chart-h::before { content: "\eb29"; }
+.o9con-bar-chart-o::before { content: "\ec16"; }
+.o9con-bar-chart-v::before { content: "\eb27"; }
+.o9con-barcode::before { content: "\ecaa"; }
+.o9con-bars::before { content: "\ea85"; }
+.o9con-basicshape-circle::before { content: "\edbc"; }
+.o9con-basicshape-hexagon::before { content: "\edb5"; }
+.o9con-basicshape-pentagon::before { content: "\edb4"; }
+.o9con-basicshape-rhombus::before { content: "\edb2"; }
+.o9con-basicshape-square::before { content: "\edb1"; }
+.o9con-basicshape-triangle::before { content: "\edae"; }
+.o9con-bath::before { content: "\ecc0"; }
+.o9con-battery::before { content: "\eca2"; }
+.o9con-battery-empty::before { content: "\eca9"; }
+.o9con-battery-half::before { content: "\eca8"; }
+.o9con-battery-quarter::before { content: "\eca7"; }
+.o9con-battery-three-quarters::before { content: "\eca3"; }
+.o9con-bed::before { content: "\eca4"; }
+.o9con-beer::before { content: "\ecc2"; }
+.o9con-bell-curve::before { content: "\eb22"; }
+.o9con-bell-filled::before { content: "\ee3c"; }
+.o9con-bell-o::before { content: "\ea39"; }
+.o9con-bell-slash::before { content: "\eca6"; }
+.o9con-bicycle::before { content: "\eca5"; }
+.o9con-big-query::before { content: "\ed53"; }
+.o9con-big-query-ds::before { content: "\edf8"; }
+.o9con-bin::before { content: "\ea8b"; }
+.o9con-bin-alt::before { content: "\ea8a"; }
+.o9con-bin-filled::before { content: "\ee3d"; }
+.o9con-binoculars::before { content: "\eb8a"; }
+.o9con-birthday-cake::before { content: "\eca1"; }
+.o9con-blind::before { content: "\ecbd"; }
+.o9con-blockchain::before { content: "\eb24"; }
+.o9con-blocker-action::before { content: "\ed74"; }
+.o9con-blocker-action-alt::before { content: "\edd8"; }
+.o9con-blocker-action-filled::before { content: "\ed75"; }
+.o9con-blocker-action-filled-alt::before { content: "\edd9"; }
+.o9con-bluetooth::before { content: "\ec9e"; }
+.o9con-bluetooth-b::before { content: "\ec9f"; }
+.o9con-bold::before { content: "\eab3"; }
+.o9con-bolt::before { content: "\ebd8"; }
+.o9con-bomb::before { content: "\ec9d"; }
+.o9con-book::before { content: "\ea3a"; }
+.o9con-book-download::before { content: "\ea8c"; }
+.o9con-book-excel::before { content: "\ec9c"; }
+.o9con-book-help::before { content: "\ea38"; }
+.o9con-book-x::before { content: "\ec9b"; }
+.o9con-bookmark::before { content: "\ec17"; }
+.o9con-bookmark-o::before { content: "\ebda"; }
+.o9con-braille::before { content: "\ec9a"; }
+.o9con-briefcase::before { content: "\ec99"; }
+.o9con-btc::before { content: "\ecc7"; }
+.o9con-bubble-chart::before { content: "\eb0d"; }
+.o9con-bug::before { content: "\ec8f"; }
+.o9con-building::before { content: "\ec97"; }
+.o9con-building-manufacture::before { content: "\ed42"; }
+.o9con-bulk-edit::before { content: "\ea8d"; }
+.o9con-bullhorn::before { content: "\ec96"; }
+.o9con-bullseye::before { content: "\ebd9"; }
+.o9con-bus::before { content: "\ec95"; }
+.o9con-cab::before { content: "\ec94"; }
+.o9con-calculator::before { content: "\eb89"; }
+.o9con-calendar::before { content: "\eb6a"; }
+.o9con-calendar-check-o::before { content: "\eb69"; }
+.o9con-calendar-date::before { content: "\ea8e"; }
+.o9con-calendar-date-selected::before { content: "\ee1e"; }
+.o9con-calendar-end::before { content: "\eb2d"; }
+.o9con-calendar-end-alt::before { content: "\edda"; }
+.o9con-calendar-minus-o::before { content: "\eb67"; }
+.o9con-calendar-o::before { content: "\ec18"; }
+.o9con-calendar-plus-o::before { content: "\eb66"; }
+.o9con-calendar-progress::before { content: "\eb65"; }
+.o9con-calendar-range::before { content: "\ee23"; }
+.o9con-calendar-start::before { content: "\eb64"; }
+.o9con-calendar-times-o::before { content: "\eb63"; }
+.o9con-calendar-warning::before { content: "\eb62"; }
+.o9con-calendar-warning-alt::before { content: "\eddb"; }
+.o9con-call::before { content: "\ebd6"; }
+.o9con-call-alt::before { content: "\ebd7"; }
+.o9con-camera::before { content: "\ecc5"; }
+.o9con-camera-retro::before { content: "\ecc6"; }
+.o9con-car::before { content: "\ec93"; }
+.o9con-caret-collapse-all::before { content: "\ee24"; }
+.o9con-caret-collapsed::before { content: "\ea8f"; }
+.o9con-caret-down::before { content: "\ea22"; }
+.o9con-caret-down-outline::before { content: "\ee05"; }
+.o9con-caret-expand-all::before { content: "\ee25"; }
+.o9con-caret-expanded::before { content: "\ea90"; }
+.o9con-caret-left::before { content: "\ea21"; }
+.o9con-caret-left-outline::before { content: "\ee06"; }
+.o9con-caret-right::before { content: "\ea20"; }
+.o9con-caret-right-outline::before { content: "\ee07"; }
+.o9con-caret-scroll-h::before { content: "\ea1f"; }
+.o9con-caret-scroll-v::before { content: "\ea1e"; }
+.o9con-caret-square-o-down::before { content: "\ea1d"; }
+.o9con-caret-square-o-left::before { content: "\ea1c"; }
+.o9con-caret-square-o-right::before { content: "\ea1b"; }
+.o9con-caret-square-o-up::before { content: "\ea1a"; }
+.o9con-caret-unfold-h::before { content: "\ea19"; }
+.o9con-caret-unfold-v::before { content: "\ea18"; }
+.o9con-caret-up::before { content: "\ea17"; }
+.o9con-caret-up-outline::before { content: "\ee08"; }
+.o9con-carousel::before { content: "\ee20"; }
+.o9con-carousel-alt::before { content: "\ee1f"; }
+.o9con-cart-arrow-down::before { content: "\ec92"; }
+.o9con-cart-plus::before { content: "\ec91"; }
+.o9con-cc::before { content: "\ecc3"; }
+.o9con-cc-o::before { content: "\ecc4"; }
+.o9con-cellular-network::before { content: "\ebd5"; }
+.o9con-certificate::before { content: "\eb61"; }
+.o9con-chain::before { content: "\ec1a"; }
+.o9con-chain-broken::before { content: "\ec19"; }
+.o9con-change-orientation-horizontal::before { content: "\ed7b"; }
+.o9con-change-orientation-vertical::before { content: "\ed7a"; }
+.o9con-chart-progress::before { content: "\ec90"; }
+.o9con-check::before { content: "\ea82"; }
+.o9con-check-circle::before { content: "\ec1b"; }
+.o9con-check-circle-o::before { content: "\ea84"; }
+.o9con-check-square::before { content: "\ec1c"; }
+.o9con-check-square-o::before { content: "\eb5d"; }
+.o9con-check-square-o-alt::before { content: "\ec1d"; }
+.o9con-chevron::before { content: "\ea0e"; }
+.o9con-chevron-circle-down::before { content: "\ea16"; }
+.o9con-chevron-circle-left::before { content: "\ea15"; }
+.o9con-chevron-circle-right::before { content: "\ea14"; }
+.o9con-chevron-circle-up::before { content: "\ea13"; }
+.o9con-chevron-down::before { content: "\ea12"; }
+.o9con-chevron-left::before { content: "\ea11"; }
+.o9con-chevron-right::before { content: "\ea10"; }
+.o9con-chevron-up::before { content: "\ea0f"; }
+.o9con-child::before { content: "\ecda"; }
+.o9con-child-alt::before { content: "\ecdb"; }
+.o9con-circle::before { content: "\ebd4"; }
+.o9con-circle-filled::before { content: "\edbb"; }
+.o9con-circle-o::before { content: "\ebd3"; }
+.o9con-circle-o-notch::before { content: "\eb5c"; }
+.o9con-circle-outline::before { content: "\edba"; }
+.o9con-circle-shape::before { content: "\ed27"; }
+.o9con-circle-thin::before { content: "\ec1e"; }
+.o9con-clear::before { content: "\ea81"; }
+.o9con-clear-bag::before { content: "\eda0"; }
+.o9con-client-side::before { content: "\ed79"; }
+.o9con-clipboard::before { content: "\eab4"; }
+.o9con-clipboard-filled::before { content: "\ee3e"; }
+.o9con-clock-o::before { content: "\ea91"; }
+.o9con-close::before { content: "\ea7e"; }
+.o9con-cloud::before { content: "\ebd2"; }
+.o9con-cloud-download::before { content: "\ea7d"; }
+.o9con-cloud-upload::before { content: "\ea7c"; }
+.o9con-cluster-boost::before { content: "\ee35"; }
+.o9con-cny::before { content: "\ebcb"; }
+.o9con-code::before { content: "\ebd0"; }
+.o9con-code-editor::before { content: "\ea7b"; }
+.o9con-code-fork::before { content: "\ebd1"; }
+.o9con-coffee::before { content: "\ec74"; }
+.o9con-cog::before { content: "\ea7a"; }
+.o9con-cog-filled::before { content: "\ee3f"; }
+.o9con-cogs::before { content: "\ea79"; }
+.o9con-collapse-down::before { content: "\ed41"; }
+.o9con-collapse-group::before { content: "\ec8e"; }
+.o9con-collapse-up::before { content: "\ed40"; }
+.o9con-color::before { content: "\ea92"; }
+.o9con-column-header::before { content: "\ed6e"; }
+.o9con-columns::before { content: "\ec1f"; }
+.o9con-combo-chart::before { content: "\eb23"; }
+.o9con-combo-chart-alt::before { content: "\ec29"; }
+.o9con-comment::before { content: "\ecfc"; }
+.o9con-comment-add::before { content: "\ea96"; }
+.o9con-comment-add-alt::before { content: "\eda8"; }
+.o9con-comment-check::before { content: "\eb5b"; }
+.o9con-comment-copy::before { content: "\eb55"; }
+.o9con-comment-cross::before { content: "\eb5a"; }
+.o9con-comment-empty::before { content: "\ea76"; }
+.o9con-comment-filled::before { content: "\ee40"; }
+.o9con-comment-help::before { content: "\ea78"; }
+.o9con-comment-help-alt::before { content: "\ecd9"; }
+.o9con-comment-line::before { content: "\ea77"; }
+.o9con-comment-new::before { content: "\eb58"; }
+.o9con-comment-o::before { content: "\eb5f"; }
+.o9con-comment-quote::before { content: "\eb57"; }
+.o9con-comment-text::before { content: "\eb56"; }
+.o9con-commenting::before { content: "\ecfd"; }
+.o9con-commenting-alt::before { content: "\eb59"; }
+.o9con-commenting-o::before { content: "\eb60"; }
+.o9con-comments::before { content: "\ecfe"; }
+.o9con-comments-alt::before { content: "\eb54"; }
+.o9con-comments-o::before { content: "\eb5e"; }
+.o9con-compare-git::before { content: "\ebcf"; }
+.o9con-compass::before { content: "\ebce"; }
+.o9con-components::before { content: "\ecbf"; }
+.o9con-compress::before { content: "\ead9"; }
+.o9con-compress-alt::before { content: "\eae6"; }
+.o9con-conditonal-transformer::before { content: "\ed91"; }
+.o9con-config-block::before { content: "\ed80"; }
+.o9con-contextual-help::before { content: "\ed6f"; }
+.o9con-control-room::before { content: "\ed1d"; }
+.o9con-control-tower::before { content: "\ed1e"; }
+.o9con-copy::before { content: "\eac7"; }
+.o9con-copyright::before { content: "\ecdd"; }
+.o9con-create-scene::before { content: "\ea75"; }
+.o9con-create-tag::before { content: "\edcc"; }
+.o9con-create-task::before { content: "\ea74"; }
+.o9con-credit-card::before { content: "\ec8c"; }
+.o9con-credit-card-alt::before { content: "\ec8d"; }
+.o9con-crop::before { content: "\ebcd"; }
+.o9con-cross-filled::before { content: "\edb9"; }
+.o9con-crosshairs::before { content: "\ebcc"; }
+.o9con-crown::before { content: "\eddd"; }
+.o9con-csv::before { content: "\ed52"; }
+.o9con-cube::before { content: "\ea73"; }
+.o9con-cube-node::before { content: "\ed88"; }
+.o9con-cubes::before { content: "\ea72"; }
+.o9con-cup::before { content: "\ecdc"; }
+.o9con-cut::before { content: "\eab6"; }
+.o9con-cutlery::before { content: "\ec8b"; }
+.o9con-dash::before { content: "\edb8"; }
+.o9con-dashboard::before { content: "\ebca"; }
+.o9con-dashboard-alt::before { content: "\ee13"; }
+.o9con-data-management::before { content: "\ea71"; }
+.o9con-database::before { content: "\ec8a"; }
+.o9con-database-admin::before { content: "\ebc9"; }
+.o9con-database-alt::before { content: "\ebc5"; }
+.o9con-database-encryption::before { content: "\ebc8"; }
+.o9con-database-protection::before { content: "\ebc7"; }
+.o9con-database-search::before { content: "\ebc6"; }
+.o9con-datetime::before { content: "\eddc"; }
+.o9con-deaf::before { content: "\ecd5"; }
+.o9con-decrease-font::before { content: "\eab7"; }
+.o9con-dedent::before { content: "\eac1"; }
+.o9con-delist::before { content: "\edc5"; }
+.o9con-delivery::before { content: "\ed3d"; }
+.o9con-delivery-store::before { content: "\ed3f"; }
+.o9con-delivery-truck::before { content: "\ed3e"; }
+.o9con-deltalake-datanode::before { content: "\ee4b"; }
+.o9con-deltalake-datanode-in::before { content: "\ee49"; }
+.o9con-deltalake-datanode-out::before { content: "\ee4a"; }
+.o9con-deltalake-datastore::before { content: "\ee4e"; }
+.o9con-deltalake-datastore-in::before { content: "\ee4c"; }
+.o9con-deltalake-datastore-out::before { content: "\ee4d"; }
+.o9con-deltalake-node::before { content: "\ed9e"; }
+.o9con-deltalake-node-in::before { content: "\ee44"; }
+.o9con-deltalake-node-out::before { content: "\ee45"; }
+.o9con-deltalake-share::before { content: "\ee12"; }
+.o9con-deltalake-share-in::before { content: "\ee46"; }
+.o9con-deltalake-share-out::before { content: "\ee47"; }
+.o9con-deltalake-write::before { content: "\ed9d"; }
+.o9con-descending::before { content: "\ee3b"; }
+.o9con-descending-sort::before { content: "\ee37"; }
+.o9con-designer::before { content: "\ea70"; }
+.o9con-desktop::before { content: "\ecbc"; }
+.o9con-desktop-alt::before { content: "\ebc4"; }
+.o9con-desktop-cloud::before { content: "\ea6f"; }
+.o9con-desktop-cog::before { content: "\ea6e"; }
+.o9con-desktop-cog-add::before { content: "\ed66"; }
+.o9con-desktop-heart::before { content: "\ea6d"; }
+.o9con-deviation::before { content: "\ecd7"; }
+.o9con-diamond::before { content: "\eb53"; }
+.o9con-diamond-filled::before { content: "\edb7"; }
+.o9con-diamond-outline::before { content: "\edb6"; }
+.o9con-diamond-shape::before { content: "\ed28"; }
+.o9con-diversity::before { content: "\ecd6"; }
+.o9con-doctor-female::before { content: "\ecd8"; }
+.o9con-doctor-male::before { content: "\ecd1"; }
+.o9con-dollar::before { content: "\ebc3"; }
+.o9con-dot-circle-o::before { content: "\eb52"; }
+.o9con-doughnut-chart::before { content: "\eb26"; }
+.o9con-download::before { content: "\ea93"; }
+.o9con-drag-handle::before { content: "\edd4"; }
+.o9con-drawing-compass::before { content: "\ecd3"; }
+.o9con-drivers-license::before { content: "\ec89"; }
+.o9con-duplicate::before { content: "\ea94"; }
+.o9con-edge::before { content: "\ed23"; }
+.o9con-edge-alt::before { content: "\ed25"; }
+.o9con-edit-cell::before { content: "\ea97"; }
+.o9con-edit-column::before { content: "\eb51"; }
+.o9con-edit-properties::before { content: "\ea95"; }
+.o9con-edit-row::before { content: "\eb50"; }
+.o9con-eject::before { content: "\ebdf"; }
+.o9con-eject-circle::before { content: "\ec13"; }
+.o9con-eject-square::before { content: "\ec0c"; }
+.o9con-ellipsis-h::before { content: "\ea6c"; }
+.o9con-ellipsis-v::before { content: "\ea6b"; }
+.o9con-empire::before { content: "\ebc2"; }
+.o9con-encrypted::before { content: "\eda9"; }
+.o9con-envelope::before { content: "\ea69"; }
+.o9con-envelope-o::before { content: "\ea6a"; }
+.o9con-envelope-open-o::before { content: "\ebc0"; }
+.o9con-envelope-square::before { content: "\ebbf"; }
+.o9con-eraser::before { content: "\eab9"; }
+.o9con-error::before { content: "\eddf"; }
+.o9con-eur::before { content: "\ebbe"; }
+.o9con-event-flow::before { content: "\ed97"; }
+.o9con-event-hub::before { content: "\ed51"; }
+.o9con-excel::before { content: "\eb4f"; }
+.o9con-exchange::before { content: "\ea0d"; }
+.o9con-exclamation::before { content: "\eb4e"; }
+.o9con-exclamation-circle::before { content: "\ea68"; }
+.o9con-exclamation-circle-filled::before { content: "\ee14"; }
+.o9con-exclamation-triangle::before { content: "\ea67"; }
+.o9con-exclamation-triangle-filled::before { content: "\ed72"; }
+.o9con-exclude::before { content: "\ee04"; }
+.o9con-execute::before { content: "\eaae"; }
+.o9con-execute-api::before { content: "\ed8e"; }
+.o9con-expand::before { content: "\ead7"; }
+.o9con-expand-alt::before { content: "\ead8"; }
+.o9con-expand-group::before { content: "\ec88"; }
+.o9con-expand-nodes::before { content: "\eae5"; }
+.o9con-export::before { content: "\eb73"; }
+.o9con-external-link::before { content: "\ea66"; }
+.o9con-external-link-square::before { content: "\ec21"; }
+.o9con-external-tenant::before { content: "\ed78"; }
+.o9con-eye::before { content: "\eaa5"; }
+.o9con-eye-slash::before { content: "\ea9d"; }
+.o9con-eyedropper::before { content: "\ec87"; }
+.o9con-factory-setting::before { content: "\ea98"; }
+.o9con-falling::before { content: "\eb25"; }
+.o9con-fast-backward::before { content: "\ebee"; }
+.o9con-fast-forward::before { content: "\ec11"; }
+.o9con-fast-forward-circle::before { content: "\ebf2"; }
+.o9con-fast-forward-square::before { content: "\ec12"; }
+.o9con-favorite-download::before { content: "\ea99"; }
+.o9con-fax::before { content: "\ec86"; }
+.o9con-female::before { content: "\ecb1"; }
+.o9con-female-alt::before { content: "\ec28"; }
+.o9con-female-o::before { content: "\ebbd"; }
+.o9con-fetch::before { content: "\ee18"; }
+.o9con-fighter-jet::before { content: "\ec81"; }
+.o9con-file::before { content: "\eabb"; }
+.o9con-file-add::before { content: "\eaf5"; }
+.o9con-file-archive-o::before { content: "\eaf9"; }
+.o9con-file-bookmark::before { content: "\eaf3"; }
+.o9con-file-cabinet::before { content: "\ebbc"; }
+.o9con-file-code-o::before { content: "\eaf8"; }
+.o9con-file-excel-o::before { content: "\eaf7"; }
+.o9con-file-favorite::before { content: "\eaf6"; }
+.o9con-file-image-o::before { content: "\eae9"; }
+.o9con-file-music-o::before { content: "\eaf4"; }
+.o9con-file-o::before { content: "\eaba"; }
+.o9con-file-pdf-o::before { content: "\eaef"; }
+.o9con-file-powerpoint-o::before { content: "\eaee"; }
+.o9con-file-script::before { content: "\eaf1"; }
+.o9con-file-setting::before { content: "\eaf0"; }
+.o9con-file-stats::before { content: "\eae8"; }
+.o9con-file-text-o::before { content: "\eaea"; }
+.o9con-file-video-o::before { content: "\eaed"; }
+.o9con-file-word-o::before { content: "\eaec"; }
+.o9con-files::before { content: "\ec24"; }
+.o9con-files-copy::before { content: "\eb4d"; }
+.o9con-files-o::before { content: "\eaeb"; }
+.o9con-filled-filter::before { content: "\ed70"; }
+.o9con-film::before { content: "\ec10"; }
+.o9con-filter::before { content: "\ea65"; }
+.o9con-filter-bold::before { content: "\ede0"; }
+.o9con-filter-check::before { content: "\ecd2"; }
+.o9con-filter-ext::before { content: "\ea9a"; }
+.o9con-filter-filled-o::before { content: "\ede1"; }
+.o9con-filter-lock::before { content: "\eb4c"; }
+.o9con-filter-remove::before { content: "\edc9"; }
+.o9con-filter-template-filled::before { content: "\eda4"; }
+.o9con-filter-template-filled-1::before { content: "\eda1"; }
+.o9con-filter-template-outline::before { content: "\eda7"; }
+.o9con-filter-template-outline-1::before { content: "\eda5"; }
+.o9con-find-replace::before { content: "\ed6d"; }
+.o9con-fire::before { content: "\ebba"; }
+.o9con-fire-extinguisher::before { content: "\ebbb"; }
+.o9con-flag::before { content: "\eb47"; }
+.o9con-flag-checkered::before { content: "\eb4a"; }
+.o9con-flag-edge::before { content: "\eb49"; }
+.o9con-flag-o::before { content: "\eb4b"; }
+.o9con-flag-triangle::before { content: "\eb48"; }
+.o9con-flame::before { content: "\eb46"; }
+.o9con-flash::before { content: "\ebb9"; }
+.o9con-flask::before { content: "\ebb8"; }
+.o9con-floppy-o::before { content: "\eabc"; }
+.o9con-flow-chart::before { content: "\eb21"; }
+.o9con-focus-center::before { content: "\eae3"; }
+.o9con-focus-center-alt::before { content: "\eae4"; }
+.o9con-focus-lock::before { content: "\eae2"; }
+.o9con-folder::before { content: "\ea9b"; }
+.o9con-folder-add::before { content: "\ecbb"; }
+.o9con-folder-add-alt::before { content: "\ea88"; }
+.o9con-folder-open::before { content: "\ebb7"; }
+.o9con-font::before { content: "\eabe"; }
+.o9con-font-color::before { content: "\eabd"; }
+.o9con-forward::before { content: "\ec22"; }
+.o9con-frown::before { content: "\eb45"; }
+.o9con-full-screen::before { content: "\ea64"; }
+.o9con-full-screen-alt::before { content: "\eae0"; }
+.o9con-full-screen-exit::before { content: "\eaac"; }
+.o9con-futbol-o::before { content: "\ec84"; }
+.o9con-gamepad::before { content: "\ec83"; }
+.o9con-gauge-chart::before { content: "\ed48"; }
+.o9con-gavel::before { content: "\ec82"; }
+.o9con-gbp::before { content: "\ebb5"; }
+.o9con-gcp-gcs::before { content: "\ed50"; }
+.o9con-genai::before { content: "\ede4"; }
+.o9con-genai-filled::before { content: "\ede2"; }
+.o9con-generate::before { content: "\edc4"; }
+.o9con-geo-marker::before { content: "\ebb4"; }
+.o9con-geo-marker-o::before { content: "\ec2a"; }
+.o9con-gg::before { content: "\ecd0"; }
+.o9con-gg-circle::before { content: "\ecd4"; }
+.o9con-gift::before { content: "\ebb3"; }
+.o9con-glass::before { content: "\ec80"; }
+.o9con-globe::before { content: "\ebb2"; }
+.o9con-graduation-cap::before { content: "\ebb1"; }
+.o9con-grid::before { content: "\ea63"; }
+.o9con-grid-alt::before { content: "\ea62"; }
+.o9con-grid-filter::before { content: "\ed6a"; }
+.o9con-group::before { content: "\eb99"; }
+.o9con-groups::before { content: "\ea61"; }
+.o9con-h-square::before { content: "\ecf5"; }
+.o9con-hand-clap::before { content: "\ecf4"; }
+.o9con-hand-lizard-o::before { content: "\ecf3"; }
+.o9con-hand-o-down::before { content: "\ea04"; }
+.o9con-hand-o-left::before { content: "\ea0b"; }
+.o9con-hand-o-right::before { content: "\ea0a"; }
+.o9con-hand-o-up::before { content: "\ea09"; }
+.o9con-hand-paper-o::before { content: "\eccf"; }
+.o9con-hand-peace-o::before { content: "\ecce"; }
+.o9con-hand-pointer-o::before { content: "\eccd"; }
+.o9con-hand-rock-o::before { content: "\eccc"; }
+.o9con-hand-scissors-o::before { content: "\eccb"; }
+.o9con-hand-spock-o::before { content: "\ecca"; }
+.o9con-handshake-o::before { content: "\ec79"; }
+.o9con-hashtag::before { content: "\ecba"; }
+.o9con-hashtag-alt::before { content: "\ec7f"; }
+.o9con-hdd-o::before { content: "\ebb0"; }
+.o9con-header::before { content: "\eabf"; }
+.o9con-headphones::before { content: "\ec7e"; }
+.o9con-heart::before { content: "\ec26"; }
+.o9con-heart-o::before { content: "\ebaf"; }
+.o9con-heartbeat::before { content: "\ec7d"; }
+.o9con-heatmap::before { content: "\ed77"; }
+.o9con-height::before { content: "\ecfb"; }
+.o9con-hexagon-shape::before { content: "\ed3c"; }
+.o9con-hide-trace::before { content: "\ee21"; }
+.o9con-hierarchy::before { content: "\eafb"; }
+.o9con-history::before { content: "\ebae"; }
+.o9con-hive::before { content: "\ed6c"; }
+.o9con-hive-sql::before { content: "\ed87"; }
+.o9con-home::before { content: "\ea5f"; }
+.o9con-home-alt::before { content: "\ea60"; }
+.o9con-home-filled::before { content: "\ee41"; }
+.o9con-hospital-o::before { content: "\ecfa"; }
+.o9con-hotel::before { content: "\ec78"; }
+.o9con-hourglass::before { content: "\ec57"; }
+.o9con-hourglass-end::before { content: "\ec7b"; }
+.o9con-hourglass-o::before { content: "\ec7a"; }
+.o9con-hourglass-start::before { content: "\ec75"; }
+.o9con-i-cursor::before { content: "\ec77"; }
+.o9con-id-badge::before { content: "\ec76"; }
+.o9con-id-card::before { content: "\ec5a"; }
+.o9con-ils::before { content: "\ecf9"; }
+.o9con-inbox::before { content: "\ebad"; }
+.o9con-increase-font::before { content: "\eac0"; }
+.o9con-indent::before { content: "\eac2"; }
+.o9con-industry::before { content: "\ecb9"; }
+.o9con-industry-alt::before { content: "\ec55"; }
+.o9con-info::before { content: "\ec39"; }
+.o9con-info-circle::before { content: "\ea5e"; }
+.o9con-info-circle-filled::before { content: "\ed71"; }
+.o9con-inline-form::before { content: "\ed73"; }
+.o9con-input-alt::before { content: "\ed7e"; }
+.o9con-inr::before { content: "\ebac"; }
+.o9con-insert::before { content: "\ec0a"; }
+.o9con-insert-circle::before { content: "\ec0f"; }
+.o9con-insert-square::before { content: "\ec09"; }
+.o9con-institution::before { content: "\ec73"; }
+.o9con-interval-partitioned-dimension::before { content: "\ed94"; }
+.o9con-italic::before { content: "\eac3"; }
+.o9con-jhub::before { content: "\edf9"; }
+.o9con-join::before { content: "\ed62"; }
+.o9con-json::before { content: "\ed4f"; }
+.o9con-kafka::before { content: "\ed4e"; }
+.o9con-kafka-alt::before { content: "\ede5"; }
+.o9con-key::before { content: "\eb43"; }
+.o9con-key-alt::before { content: "\eb44"; }
+.o9con-keyboard-o::before { content: "\ebab"; }
+.o9con-krw::before { content: "\ecf8"; }
+.o9con-language::before { content: "\ec0b"; }
+.o9con-laptop::before { content: "\ebaa"; }
+.o9con-layout::before { content: "\ea9e"; }
+.o9con-lead-time::before { content: "\ea5d"; }
+.o9con-leaf::before { content: "\eba9"; }
+.o9con-left-angled-triangle::before { content: "\edee"; }
+.o9con-left-pane-o::before { content: "\edbf"; }
+.o9con-left-right::before { content: "\ed3b"; }
+.o9con-legal::before { content: "\ed15"; }
+.o9con-legend::before { content: "\ed22"; }
+.o9con-length::before { content: "\ecf7"; }
+.o9con-level-down::before { content: "\eadf"; }
+.o9con-level-up::before { content: "\eade"; }
+.o9con-life-bouy::before { content: "\eba8"; }
+.o9con-lightbulb-glow::before { content: "\eba7"; }
+.o9con-lightbulb-o::before { content: "\eba6"; }
+.o9con-line-chart::before { content: "\eb20"; }
+.o9con-line-chart-alt::before { content: "\eafc"; }
+.o9con-link::before { content: "\eac4"; }
+.o9con-list::before { content: "\eaca"; }
+.o9con-list-alt::before { content: "\eac5"; }
+.o9con-list-ol::before { content: "\ead1"; }
+.o9con-list-ul::before { content: "\ea5c"; }
+.o9con-location-arrow::before { content: "\ec72"; }
+.o9con-lock::before { content: "\eb3d"; }
+.o9con-lock-alt::before { content: "\eb42"; }
+.o9con-lock-filled::before { content: "\ed8a"; }
+.o9con-lock-filter::before { content: "\eb41"; }
+.o9con-lock-hole::before { content: "\eb40"; }
+.o9con-lock-open::before { content: "\eb3e"; }
+.o9con-lock-open-alt::before { content: "\eb3f"; }
+.o9con-lock-open-two::before { content: "\ed4a"; }
+.o9con-logical-group::before { content: "\ea5b"; }
+.o9con-long-arrow-down::before { content: "\ea08"; }
+.o9con-long-arrow-left::before { content: "\ea07"; }
+.o9con-long-arrow-right::before { content: "\ea06"; }
+.o9con-long-arrow-up::before { content: "\ea05"; }
+.o9con-loss::before { content: "\eb1f"; }
+.o9con-low-vision::before { content: "\ec71"; }
+.o9con-lower-limit::before { content: "\ed9c"; }
+.o9con-magic::before { content: "\eba5"; }
+.o9con-magnet::before { content: "\eba4"; }
+.o9con-mail-new::before { content: "\ec70"; }
+.o9con-mail-o9::before { content: "\ec6f"; }
+.o9con-mail-reply::before { content: "\eadc"; }
+.o9con-mail-reply-all::before { content: "\eadd"; }
+.o9con-mail-write::before { content: "\ec6e"; }
+.o9con-male::before { content: "\ecb8"; }
+.o9con-male-alt::before { content: "\ec27"; }
+.o9con-male-o::before { content: "\eba3"; }
+.o9con-manufacturing-plant::before { content: "\ed39"; }
+.o9con-map::before { content: "\ec6c"; }
+.o9con-map-marker::before { content: "\ec3a"; }
+.o9con-map-pin::before { content: "\eba2"; }
+.o9con-map-signs::before { content: "\ec6d"; }
+.o9con-marker-dashedline::before { content: "\edad"; }
+.o9con-marker-dottedline::before { content: "\edac"; }
+.o9con-marker-solidline::before { content: "\edab"; }
+.o9con-marker-splitline::before { content: "\edaa"; }
+.o9con-mars-double::before { content: "\ed0b"; }
+.o9con-mars-stroke::before { content: "\ed12"; }
+.o9con-mars-stroke-h::before { content: "\ed14"; }
+.o9con-mars-stroke-v::before { content: "\ed13"; }
+.o9con-maslow-pyramid::before { content: "\eb1e"; }
+.o9con-master-planner::before { content: "\ee19"; }
+.o9con-material-planner::before { content: "\ee1a"; }
+.o9con-max-val::before { content: "\eb1d"; }
+.o9con-measure-alias::before { content: "\ed81"; }
+.o9con-measure-filter::before { content: "\ed98"; }
+.o9con-measure-tools::before { content: "\ecf6"; }
+.o9con-medkit::before { content: "\ecf2"; }
+.o9con-meh::before { content: "\eb3c"; }
+.o9con-member-specific-attribute::before { content: "\edc1"; }
+.o9con-mercury::before { content: "\ed0c"; }
+.o9con-merge-git::before { content: "\eba1"; }
+.o9con-merge-up::before { content: "\ed0a"; }
+.o9con-microchip::before { content: "\ec6b"; }
+.o9con-microphone::before { content: "\ec0d"; }
+.o9con-microphone-slash::before { content: "\ec0e"; }
+.o9con-min-val::before { content: "\eb1c"; }
+.o9con-mind-map::before { content: "\eb1b"; }
+.o9con-minus::before { content: "\ea5a"; }
+.o9con-minus-circle::before { content: "\ec2b"; }
+.o9con-minus-circle-o::before { content: "\eb3b"; }
+.o9con-minus-plus::before { content: "\ed38"; }
+.o9con-minus-square::before { content: "\ec2c"; }
+.o9con-minus-square-o::before { content: "\eb3a"; }
+.o9con-missed-call::before { content: "\eba0"; }
+.o9con-mobile::before { content: "\ecb7"; }
+.o9con-mobile-alt::before { content: "\eb9f"; }
+.o9con-money::before { content: "\ec6a"; }
+.o9con-monitor::before { content: "\eb9e"; }
+.o9con-monitor-view::before { content: "\edde"; }
+.o9con-moon-o::before { content: "\ecb6"; }
+.o9con-moon-star::before { content: "\ec69"; }
+.o9con-motorcycle::before { content: "\ec68"; }
+.o9con-mouse-pointer::before { content: "\ec67"; }
+.o9con-move-to-right::before { content: "\ed99"; }
+.o9con-multi-column::before { content: "\ee1b"; }
+.o9con-multibar-chart::before { content: "\edff"; }
+.o9con-music::before { content: "\ec05"; }
+.o9con-mute::before { content: "\ec08"; }
+.o9con-network-collapse::before { content: "\ec66"; }
+.o9con-network-expand::before { content: "\ec65"; }
+.o9con-network-node::before { content: "\ed37"; }
+.o9con-network-nodes::before { content: "\eb1a"; }
+.o9con-neuter::before { content: "\ed0d"; }
+.o9con-newspaper-o::before { content: "\ec62"; }
+.o9con-next::before { content: "\ebfd"; }
+.o9con-next-circle::before { content: "\ec07"; }
+.o9con-next-square::before { content: "\ec06"; }
+.o9con-no-call::before { content: "\eb9d"; }
+.o9con-no-edit::before { content: "\eb39"; }
+.o9con-no-video::before { content: "\ed16"; }
+.o9con-non-cyclic::before { content: "\edbe"; }
+.o9con-normal-distribution::before { content: "\eb19"; }
+.o9con-not-started::before { content: "\edf0"; }
+.o9con-notes::before { content: "\ea9f"; }
+.o9con-notification::before { content: "\ec63"; }
+.o9con-nullify::before { content: "\edbd"; }
+.o9con-numeric-download::before { content: "\ee38"; }
+.o9con-o9-logo::before { content: "\ec60"; }
+.o9con-object-group::before { content: "\ec5f"; }
+.o9con-object-ungroup::before { content: "\ec5e"; }
+.o9con-old::before { content: "\eca0"; }
+.o9con-omni-direction-alt::before { content: "\ea59"; }
+.o9con-on-hold::before { content: "\edf1"; }
+.o9con-online::before { content: "\eb9c"; }
+.o9con-open-new::before { content: "\ea58"; }
+.o9con-open-parcel::before { content: "\ed36"; }
+.o9con-open-same::before { content: "\edcb"; }
+.o9con-output-alt::before { content: "\ed7f"; }
+.o9con-package::before { content: "\ed35"; }
+.o9con-packing::before { content: "\ed34"; }
+.o9con-page::before { content: "\edc3"; }
+.o9con-page-break::before { content: "\edfa"; }
+.o9con-page-number::before { content: "\edfb"; }
+.o9con-pagegroup::before { content: "\edc2"; }
+.o9con-paint-brush::before { content: "\ec5d"; }
+.o9con-pane::before { content: "\edfe"; }
+.o9con-paper-plane::before { content: "\eb9a"; }
+.o9con-paper-plane-filled::before { content: "\edd6"; }
+.o9con-paper-plane-land::before { content: "\eb9b"; }
+.o9con-paper-plane-o::before { content: "\ecb4"; }
+.o9con-paper-plane-send::before { content: "\ec2d"; }
+.o9con-paperclip::before { content: "\ead2"; }
+.o9con-paragraph::before { content: "\eac9"; }
+.o9con-parquet::before { content: "\ed5e"; }
+.o9con-partial-completed::before { content: "\edf2"; }
+.o9con-paste::before { content: "\ee43"; }
+.o9con-pause::before { content: "\ec02"; }
+.o9con-pause-circle::before { content: "\ec04"; }
+.o9con-pause-square::before { content: "\ec03"; }
+.o9con-paw::before { content: "\ed17"; }
+.o9con-pdf-download::before { content: "\ec5c"; }
+.o9con-pencil::before { content: "\eaa0"; }
+.o9con-pencil-square::before { content: "\ec2e"; }
+.o9con-pencil-square-o::before { content: "\eb38"; }
+.o9con-pending::before { content: "\edf3"; }
+.o9con-performance-monitor::before { content: "\ea57"; }
+.o9con-phone-book::before { content: "\ec5b"; }
+.o9con-phone-square::before { content: "\ec2f"; }
+.o9con-picture::before { content: "\ec01"; }
+.o9con-pie-chart::before { content: "\ea56"; }
+.o9con-pie-chart-alt::before { content: "\eb18"; }
+.o9con-pipeline::before { content: "\eb17"; }
+.o9con-pipeline-alt::before { content: "\ed60"; }
+.o9con-pipeline-group::before { content: "\ed61"; }
+.o9con-pivot::before { content: "\ee15"; }
+.o9con-plane::before { content: "\ec46"; }
+.o9con-play::before { content: "\ebfe"; }
+.o9con-play-circle::before { content: "\ec00"; }
+.o9con-play-circle-fill::before { content: "\ed96"; }
+.o9con-play-presentation::before { content: "\eaa1"; }
+.o9con-play-square::before { content: "\ebff"; }
+.o9con-plug::before { content: "\ec59"; }
+.o9con-plus::before { content: "\ea54"; }
+.o9con-plus-circle::before { content: "\ec30"; }
+.o9con-plus-circle-o::before { content: "\ea55"; }
+.o9con-plus-filled::before { content: "\edb3"; }
+.o9con-plus-minus::before { content: "\ed32"; }
+.o9con-plus-minus-alt::before { content: "\ed33"; }
+.o9con-plus-square::before { content: "\ec31"; }
+.o9con-plus-square-o::before { content: "\ea83"; }
+.o9con-polling-transformer::before { content: "\ee32"; }
+.o9con-populate::before { content: "\edc6"; }
+.o9con-power-off::before { content: "\eb98"; }
+.o9con-presentation::before { content: "\eaa2"; }
+.o9con-prev::before { content: "\ebfb"; }
+.o9con-prev-circle::before { content: "\ebfa"; }
+.o9con-prev-square::before { content: "\ebfc"; }
+.o9con-print-configuration::before { content: "\edfc"; }
+.o9con-printer::before { content: "\eb97"; }
+.o9con-priority-edge::before { content: "\ea53"; }
+.o9con-process::before { content: "\eb96"; }
+.o9con-profit::before { content: "\eb14"; }
+.o9con-profit-flag::before { content: "\eb15"; }
+.o9con-progress::before { content: "\edf4"; }
+.o9con-publish::before { content: "\edc7"; }
+.o9con-publish-in::before { content: "\ee0d"; }
+.o9con-pull-data::before { content: "\ed4d"; }
+.o9con-pull-request::before { content: "\eb95"; }
+.o9con-push-data::before { content: "\ed4c"; }
+.o9con-push-pin::before { content: "\eb6f"; }
+.o9con-push-pinned::before { content: "\ed49"; }
+.o9con-puzzle-piece::before { content: "\eb93"; }
+.o9con-pyspark::before { content: "\ed6b"; }
+.o9con-python::before { content: "\ed95"; }
+.o9con-python-filled::before { content: "\ee16"; }
+.o9con-qrcode::before { content: "\eb92"; }
+.o9con-question::before { content: "\eb90"; }
+.o9con-question-circle::before { content: "\eb91"; }
+.o9con-question-circle-filled::before { content: "\ee42"; }
+.o9con-quote-left::before { content: "\eb8f"; }
+.o9con-quote-right::before { content: "\eb8e"; }
+.o9con-radio-checked::before { content: "\ed76"; }
+.o9con-re-run::before { content: "\ed8d"; }
+.o9con-record::before { content: "\ebf8"; }
+.o9con-record-circle::before { content: "\ebdd"; }
+.o9con-record-square::before { content: "\ebf9"; }
+.o9con-recycle::before { content: "\eb8d"; }
+.o9con-redshift::before { content: "\ed63"; }
+.o9con-refresh::before { content: "\ea52"; }
+.o9con-regenerate::before { content: "\edc8"; }
+.o9con-registered-trademark::before { content: "\ecf1"; }
+.o9con-rename::before { content: "\eaa3"; }
+.o9con-repeat::before { content: "\eb8c"; }
+.o9con-repeat-all::before { content: "\ebf4"; }
+.o9con-repeat-alt::before { content: "\ebf7"; }
+.o9con-repeat-one::before { content: "\ebf5"; }
+.o9con-repeat-one-alt::before { content: "\ebf6"; }
+.o9con-report-config::before { content: "\ea51"; }
+.o9con-report-link::before { content: "\ee2b"; }
+.o9con-reset-to-factory-settings::before { content: "\ee17"; }
+.o9con-resolved::before { content: "\edf5"; }
+.o9con-resource-manufacture::before { content: "\ed31"; }
+.o9con-respread::before { content: "\eb36"; }
+.o9con-respread-alt::before { content: "\eb37"; }
+.o9con-restore-default::before { content: "\ee1d"; }
+.o9con-resume::before { content: "\ebf1"; }
+.o9con-resume-circle::before { content: "\ebf3"; }
+.o9con-resume-square::before { content: "\ebde"; }
+.o9con-retweet::before { content: "\ec32"; }
+.o9con-retweet-alt::before { content: "\eb86"; }
+.o9con-rewind-circle::before { content: "\ebf0"; }
+.o9con-rewind-square::before { content: "\ebef"; }
+.o9con-right-angled-triangle::before { content: "\edef"; }
+.o9con-right-pane-o::before { content: "\edc0"; }
+.o9con-rising::before { content: "\eb13"; }
+.o9con-road::before { content: "\ec47"; }
+.o9con-rocket::before { content: "\ea50"; }
+.o9con-rotate-90::before { content: "\ea4f"; }
+.o9con-rotate-left::before { content: "\ead0"; }
+.o9con-rotate-right::before { content: "\eacb"; }
+.o9con-rotate-user::before { content: "\ede6"; }
+.o9con-rss::before { content: "\eb84"; }
+.o9con-rss-square::before { content: "\eb87"; }
+.o9con-rub::before { content: "\ecf0"; }
+.o9con-ruler::before { content: "\ecef"; }
+.o9con-save-as::before { content: "\eda6"; }
+.o9con-scatter-plot::before { content: "\eb12"; }
+.o9con-scenario::before { content: "\eb88"; }
+.o9con-search::before { content: "\ea4e"; }
+.o9con-search-airflow::before { content: "\ee26"; }
+.o9con-search-logs::before { content: "\ee27"; }
+.o9con-search-task::before { content: "\ee28"; }
+.o9con-select-all::before { content: "\ed9b"; }
+.o9con-select-area::before { content: "\ed24"; }
+.o9con-select-check::before { content: "\ed30"; }
+.o9con-semi-circle::before { content: "\edf6"; }
+.o9con-setting-edit::before { content: "\ea4d"; }
+.o9con-sftp::before { content: "\ed4b"; }
+.o9con-share::before { content: "\eae1"; }
+.o9con-share-all-filled::before { content: "\ed86"; }
+.o9con-share-alt::before { content: "\eb83"; }
+.o9con-share-alt-filled::before { content: "\ed65"; }
+.o9con-share-alt-square::before { content: "\eb85"; }
+.o9con-share-circle::before { content: "\eb75"; }
+.o9con-share-square::before { content: "\ec34"; }
+.o9con-share-square-o::before { content: "\ec33"; }
+.o9con-shield::before { content: "\ec56"; }
+.o9con-ship::before { content: "\ec3d"; }
+.o9con-shipment-tracker::before { content: "\ed7d"; }
+.o9con-shopping-bag::before { content: "\ec54"; }
+.o9con-shopping-basket::before { content: "\ec53"; }
+.o9con-shopping-cart::before { content: "\ec52"; }
+.o9con-shopping-goods::before { content: "\ee0e"; }
+.o9con-shopping-location::before { content: "\ee0f"; }
+.o9con-show-view::before { content: "\eaa4"; }
+.o9con-shower::before { content: "\ecee"; }
+.o9con-shrink-corners::before { content: "\eadb"; }
+.o9con-shrink-nodes::before { content: "\eada"; }
+.o9con-shuffle::before { content: "\ebed"; }
+.o9con-sign-in::before { content: "\eb71"; }
+.o9con-sign-out::before { content: "\eb82"; }
+.o9con-signal::before { content: "\ecbe"; }
+.o9con-signal-alt::before { content: "\eb81"; }
+.o9con-single-column::before { content: "\ee1c"; }
+.o9con-size::before { content: "\eced"; }
+.o9con-slack::before { content: "\eb80"; }
+.o9con-sliders::before { content: "\ea4c"; }
+.o9con-smile::before { content: "\eb35"; }
+.o9con-snowflake::before { content: "\eb34"; }
+.o9con-snowflake-ds::before { content: "\edfd"; }
+.o9con-solution::before { content: "\ed7c"; }
+.o9con-sort::before { content: "\ee34"; }
+.o9con-sort-12-up::before { content: "\eb10"; }
+.o9con-sort-21-up::before { content: "\eb0e"; }
+.o9con-sort-alpha-asc::before { content: "\eb0b"; }
+.o9con-sort-alpha-desc::before { content: "\eb07"; }
+.o9con-sort-amount-asc::before { content: "\eb01"; }
+.o9con-sort-amount-desc::before { content: "\eb09"; }
+.o9con-sort-asc-up::before { content: "\eb0c"; }
+.o9con-sort-az-up::before { content: "\eb0a"; }
+.o9con-sort-dsc-up::before { content: "\eb08"; }
+.o9con-sort-filled::before { content: "\ee33"; }
+.o9con-sort-numeric-asc::before { content: "\eb11"; }
+.o9con-sort-numeric-desc::before { content: "\eb0f"; }
+.o9con-sort-za-up::before { content: "\eb06"; }
+.o9con-space-shuttle::before { content: "\ec51"; }
+.o9con-spark-cluster::before { content: "\ee29"; }
+.o9con-spark-sql::before { content: "\ed85"; }
+.o9con-sparkle::before { content: "\ee0c"; }
+.o9con-speaker::before { content: "\ebec"; }
+.o9con-spinner::before { content: "\ea4b"; }
+.o9con-split-up::before { content: "\ecff"; }
+.o9con-spoon::before { content: "\ed18"; }
+.o9con-spreaker-translate::before { content: "\ebeb"; }
+.o9con-sql::before { content: "\ed5f"; }
+.o9con-square::before { content: "\ec35"; }
+.o9con-square-filled::before { content: "\edb0"; }
+.o9con-square-o::before { content: "\eb32"; }
+.o9con-square-outline::before { content: "\edaf"; }
+.o9con-square-square-o::before { content: "\eb33"; }
+.o9con-stack::before { content: "\eb7d"; }
+.o9con-stack-exchange::before { content: "\eb7f"; }
+.o9con-stack-overflow::before { content: "\eb7e"; }
+.o9con-stacked-bar-h::before { content: "\eb05"; }
+.o9con-stacked-bar-v::before { content: "\eb04"; }
+.o9con-stacking::before { content: "\ee2d"; }
+.o9con-stacking-filled::before { content: "\ee2c"; }
+.o9con-staging-api::before { content: "\ed56"; }
+.o9con-star::before { content: "\ec36"; }
+.o9con-star-half-o::before { content: "\eb31"; }
+.o9con-star-o::before { content: "\ea4a"; }
+.o9con-states::before { content: "\ecec"; }
+.o9con-stethoscope::before { content: "\eb7c"; }
+.o9con-sticky-note-o::before { content: "\eae7"; }
+.o9con-stop::before { content: "\ebe8"; }
+.o9con-stop-circle::before { content: "\ebea"; }
+.o9con-stop-square::before { content: "\ebe9"; }
+.o9con-stop-watch::before { content: "\eceb"; }
+.o9con-store::before { content: "\ed2e"; }
+.o9con-store-cart::before { content: "\ed2f"; }
+.o9con-street-view::before { content: "\ecea"; }
+.o9con-strikethrough::before { content: "\eacc"; }
+.o9con-subscript::before { content: "\eacd"; }
+.o9con-subway::before { content: "\ec50"; }
+.o9con-suitcase::before { content: "\ece9"; }
+.o9con-sun-o::before { content: "\eb7b"; }
+.o9con-superpowers::before { content: "\ec4f"; }
+.o9con-superscript::before { content: "\eace"; }
+.o9con-supplier::before { content: "\ed2d"; }
+.o9con-supply::before { content: "\ed2c"; }
+.o9con-support-ticket::before { content: "\ea49"; }
+.o9con-survey::before { content: "\edf7"; }
+.o9con-swipe-right::before { content: "\eaa6"; }
+.o9con-switch::before { content: "\ed9f"; }
+.o9con-table::before { content: "\eb16"; }
+.o9con-table-column::before { content: "\eaa7"; }
+.o9con-table-row::before { content: "\eaa8"; }
+.o9con-tablet::before { content: "\eb7a"; }
+.o9con-tag::before { content: "\ea48"; }
+.o9con-tags::before { content: "\eb79"; }
+.o9con-tape::before { content: "\ece8"; }
+.o9con-target::before { content: "\eb78"; }
+.o9con-task::before { content: "\ee48"; }
+.o9con-tasks::before { content: "\eb03"; }
+.o9con-taxi::before { content: "\ec4e"; }
+.o9con-telephone::before { content: "\eb77"; }
+.o9con-template::before { content: "\ea47"; }
+.o9con-tenant::before { content: "\ea46"; }
+.o9con-tenant-active::before { content: "\ed84"; }
+.o9con-tenant-backup::before { content: "\ed8c"; }
+.o9con-tenant-inactive::before { content: "\ed83"; }
+.o9con-tenant-operation::before { content: "\ed82"; }
+.o9con-tenant-restore::before { content: "\ed8b"; }
+.o9con-terminal::before { content: "\eb76"; }
+.o9con-terminate-execution::before { content: "\ed90"; }
+.o9con-text::before { content: "\ead4"; }
+.o9con-text-download::before { content: "\ee39"; }
+.o9con-text-height::before { content: "\eacf"; }
+.o9con-text-width::before { content: "\ead6"; }
+.o9con-th-large::before { content: "\ece7"; }
+.o9con-th-list::before { content: "\ed19"; }
+.o9con-thermometer::before { content: "\ec48"; }
+.o9con-thermometer-empty::before { content: "\ec4d"; }
+.o9con-thermometer-full::before { content: "\ec4c"; }
+.o9con-thermometer-half::before { content: "\ec4b"; }
+.o9con-thermometer-quarter::before { content: "\ec3c"; }
+.o9con-thermometer-three-quarters::before { content: "\ec3b"; }
+.o9con-thumb-tack::before { content: "\ec37"; }
+.o9con-thumb-tack-alt::before { content: "\eb94"; }
+.o9con-thumbs-down::before { content: "\eb30"; }
+.o9con-thumbs-down-filled::before { content: "\ee09"; }
+.o9con-thumbs-up::before { content: "\eb2f"; }
+.o9con-thumbs-up-filled::before { content: "\ee0a"; }
+.o9con-ticket::before { content: "\ec49"; }
+.o9con-ticket-add::before { content: "\ec4a"; }
+.o9con-tile-layout::before { content: "\eb74"; }
+.o9con-timeline::before { content: "\eb00"; }
+.o9con-timeline-h::before { content: "\eb02"; }
+.o9con-timeline-v::before { content: "\eafd"; }
+.o9con-times-circle::before { content: "\ebc1"; }
+.o9con-times-circle-o::before { content: "\ea7f"; }
+.o9con-times-square::before { content: "\ebb6"; }
+.o9con-times-square-o::before { content: "\ea80"; }
+.o9con-tint::before { content: "\eab8"; }
+.o9con-toggle-off::before { content: "\ea45"; }
+.o9con-toggle-on::before { content: "\ea44"; }
+.o9con-tools::before { content: "\ea43"; }
+.o9con-tornado::before { content: "\ea42"; }
+.o9con-trademark::before { content: "\ece6"; }
+.o9con-train::before { content: "\ec45"; }
+.o9con-transform::before { content: "\ea41"; }
+.o9con-transgender::before { content: "\ed0f"; }
+.o9con-transgender-alt::before { content: "\ed0e"; }
+.o9con-tree::before { content: "\ed1a"; }
+.o9con-tree-structure::before { content: "\eaff"; }
+.o9con-tree-view::before { content: "\eafe"; }
+.o9con-tree-view-reverse::before { content: "\ee10"; }
+.o9con-trend-down::before { content: "\ed00"; }
+.o9con-trend-up::before { content: "\ed01"; }
+.o9con-triageroom::before { content: "\ed93"; }
+.o9con-triangle-shape::before { content: "\ed26"; }
+.o9con-trophy::before { content: "\eb2e"; }
+.o9con-truck::before { content: "\eaa9"; }
+.o9con-try::before { content: "\ece2"; }
+.o9con-tty::before { content: "\ecb3"; }
+.o9con-tty-1::before { content: "\ede7"; }
+.o9con-tty-2::before { content: "\ede8"; }
+.o9con-turn-down-left::before { content: "\ed02"; }
+.o9con-turn-down-right::before { content: "\ed03"; }
+.o9con-turn-left-down::before { content: "\ed04"; }
+.o9con-turn-left-up::before { content: "\ed05"; }
+.o9con-turn-right-down::before { content: "\ed06"; }
+.o9con-turn-right-up::before { content: "\ed07"; }
+.o9con-turn-up-left::before { content: "\ed08"; }
+.o9con-turn-up-right::before { content: "\ed09"; }
+.o9con-umbrella::before { content: "\eb6e"; }
+.o9con-umbrella-rain::before { content: "\eb72"; }
+.o9con-underline::before { content: "\ead5"; }
+.o9con-unfreeze::before { content: "\ed44"; }
+.o9con-universal-access::before { content: "\ece4"; }
+.o9con-unlink::before { content: "\ead3"; }
+.o9con-unlock-full::before { content: "\ed3a"; }
+.o9con-unlocked-filled::before { content: "\ed89"; }
+.o9con-unpacking::before { content: "\ed2b"; }
+.o9con-untagged::before { content: "\edca"; }
+.o9con-up-down::before { content: "\eaaa"; }
+.o9con-upload::before { content: "\eaab"; }
+.o9con-upper-limit::before { content: "\ed9a"; }
+.o9con-usb::before { content: "\eafa"; }
+.o9con-user::before { content: "\ea3e"; }
+.o9con-user-edit::before { content: "\ece3"; }
+.o9con-user-management::before { content: "\ea40"; }
+.o9con-user-plus::before { content: "\ece5"; }
+.o9con-user-secret::before { content: "\ed1b"; }
+.o9con-user-setting::before { content: "\ea3f"; }
+.o9con-user-times::before { content: "\ece1"; }
+.o9con-users-alt::before { content: "\ea3d"; }
+.o9con-venus-double::before { content: "\ed10"; }
+.o9con-venus-mars::before { content: "\ed11"; }
+.o9con-viacoin::before { content: "\ece0"; }
+.o9con-video::before { content: "\ebe6"; }
+.o9con-video-camera::before { content: "\ed1c"; }
+.o9con-video-rec::before { content: "\ebe7"; }
+.o9con-view-favorites::before { content: "\ee11"; }
+.o9con-view-report::before { content: "\ea3c"; }
+.o9con-view-trace::before { content: "\ee22"; }
+.o9con-voicemode::before { content: "\ee0b"; }
+.o9con-volume-control-phone::before { content: "\ecdf"; }
+.o9con-volume-down::before { content: "\ebe5"; }
+.o9con-volume-high::before { content: "\ebe4"; }
+.o9con-volume-low::before { content: "\ebe3"; }
+.o9con-volume-mid::before { content: "\ebe2"; }
+.o9con-volume-mute::before { content: "\ebe1"; }
+.o9con-volume-up::before { content: "\ebe0"; }
+.o9con-warehouse::before { content: "\ed2a"; }
+.o9con-waterfall-chart::before { content: "\ed29"; }
+.o9con-webhook::before { content: "\ea3b"; }
+.o9con-webhook-o::before { content: "\ecb2"; }
+.o9con-wheelchair::before { content: "\ec42"; }
+.o9con-wheelchair-alt::before { content: "\ec43"; }
+.o9con-where-used::before { content: "\ed8f"; }
+.o9con-width::before { content: "\ecde"; }
+.o9con-wifi::before { content: "\eb6d"; }
+.o9con-window-close::before { content: "\ec41"; }
+.o9con-window-maximize::before { content: "\ec40"; }
+.o9con-window-minimize::before { content: "\ec3f"; }
+.o9con-window-restore::before { content: "\ec3e"; }
+.o9con-wrench::before { content: "\eb6c"; }
+.o9con-zoom-in::before { content: "\eaaf"; }
+.o9con-zoom-out::before { content: "\eaad"; }
+
+/* ============================================================
+ * aliases (legacy names mapped to their canonical glyphs)
+ * ========================================================== */
+.o9con-asl-interpreting::before { content: "\ec98"; }   /* alias of american-sign-language-interpreting */
+.o9con-th::before { content: "\ea86"; }   /* alias of apps */
+.o9con-navicon::before { content: "\ea85"; }   /* alias of bars */
+.o9con-reorder::before { content: "\ea85"; }   /* alias of bars */
+.o9con-trash::before { content: "\ea8b"; }   /* alias of bin */
+.o9con-trash-o::before { content: "\ea8b"; }   /* alias of bin */
+.o9con-bitcoin::before { content: "\ecc7"; }   /* alias of btc */
+.o9con-phone::before { content: "\ebd7"; }   /* alias of call-alt */
+.o9con-sort-desc::before { content: "\ea22"; }   /* alias of caret-down */
+.o9con-sort-down::before { content: "\ea22"; }   /* alias of caret-down */
+.o9con-unsorted::before { content: "\ea1e"; }   /* alias of caret-scroll-v */
+.o9con-toggle-down::before { content: "\ea1d"; }   /* alias of caret-square-o-down */
+.o9con-toggle-left::before { content: "\ea1c"; }   /* alias of caret-square-o-left */
+.o9con-toggle-right::before { content: "\ea1b"; }   /* alias of caret-square-o-right */
+.o9con-toggle-up::before { content: "\ea1a"; }   /* alias of caret-square-o-up */
+.o9con-sort-asc::before { content: "\ea17"; }   /* alias of caret-up */
+.o9con-sort-up::before { content: "\ea17"; }   /* alias of caret-up */
+.o9con-genderless::before { content: "\ec1e"; }   /* alias of circle-thin */
+.o9con-remove::before { content: "\ea7e"; }   /* alias of close */
+.o9con-jpy::before { content: "\ebcb"; }   /* alias of cny */
+.o9con-rmb::before { content: "\ebcb"; }   /* alias of cny */
+.o9con-yen::before { content: "\ebcb"; }   /* alias of cny */
+.o9con-gear::before { content: "\ea7a"; }   /* alias of cog */
+.o9con-gears::before { content: "\ea79"; }   /* alias of cogs */
+.o9con-scissors::before { content: "\eab6"; }   /* alias of cut */
+.o9con-tachometer::before { content: "\ebca"; }   /* alias of dashboard */
+.o9con-outdent::before { content: "\eac1"; }   /* alias of dedent */
+.o9con-user-md::before { content: "\ecd1"; }   /* alias of doctor-male */
+.o9con-usd::before { content: "\ebc3"; }   /* alias of dollar */
+.o9con-ge::before { content: "\ebc2"; }   /* alias of empire */
+.o9con-euro::before { content: "\ebbe"; }   /* alias of eur */
+.o9con-warning::before { content: "\ea67"; }   /* alias of exclamation-triangle */
+.o9con-show::before { content: "\eaa5"; }   /* alias of eye */
+.o9con-hide::before { content: "\ea9d"; }   /* alias of eye-slash */
+.o9con-venus::before { content: "\ebbd"; }   /* alias of female-o */
+.o9con-file-photo-o::before { content: "\eae9"; }   /* alias of file-image-o */
+.o9con-file-picture-o::before { content: "\eae9"; }   /* alias of file-image-o */
+.o9con-file-audio-o::before { content: "\eaf4"; }   /* alias of file-music-o */
+.o9con-file-sound-o::before { content: "\eaf4"; }   /* alias of file-music-o */
+.o9con-file-text::before { content: "\eaea"; }   /* alias of file-text-o */
+.o9con-file-movie-o::before { content: "\eaed"; }   /* alias of file-video-o */
+.o9con-save::before { content: "\eabc"; }   /* alias of floppy-o */
+.o9con-folder-open-o::before { content: "\ebb7"; }   /* alias of folder-open */
+.o9con-soccer-ball-o::before { content: "\ec84"; }   /* alias of futbol-o */
+.o9con-mortar-board::before { content: "\ebb1"; }   /* alias of graduation-cap */
+.o9con-users::before { content: "\eb99"; }   /* alias of group */
+.o9con-hand-stop-o::before { content: "\eccf"; }   /* alias of hand-paper-o */
+.o9con-hand-grab-o::before { content: "\eccc"; }   /* alias of hand-rock-o */
+.o9con-shekel::before { content: "\ecf9"; }   /* alias of ils */
+.o9con-sheqel::before { content: "\ecf9"; }   /* alias of ils */
+.o9con-rupee::before { content: "\ebac"; }   /* alias of inr */
+.o9con-university::before { content: "\ec73"; }   /* alias of institution */
+.o9con-support::before { content: "\eba8"; }   /* alias of life-bouy */
+.o9con-unlock::before { content: "\eb3e"; }   /* alias of lock-open */
+.o9con-unlock-alt::before { content: "\eb3f"; }   /* alias of lock-open-alt */
+.o9con-reply::before { content: "\eadc"; }   /* alias of mail-reply */
+.o9con-reply-all::before { content: "\eadd"; }   /* alias of mail-reply-all */
+.o9con-mars::before { content: "\eba3"; }   /* alias of male-o */
+.o9con-mobile-phone::before { content: "\ecb7"; }   /* alias of mobile */
+.o9con-step-forward::before { content: "\ebfd"; }   /* alias of next */
+.o9con-send::before { content: "\eb9a"; }   /* alias of paper-plane */
+.o9con-send-o::before { content: "\ecb4"; }   /* alias of paper-plane-o */
+.o9con-edit::before { content: "\eb38"; }   /* alias of pencil-square-o */
+.o9con-image::before { content: "\ec01"; }   /* alias of picture */
+.o9con-photo::before { content: "\ec01"; }   /* alias of picture */
+.o9con-photo-o::before { content: "\ec01"; }   /* alias of picture */
+.o9con-picture-o::before { content: "\ec01"; }   /* alias of picture */
+.o9con-play-circle-o::before { content: "\ec00"; }   /* alias of play-circle */
+.o9con-step-backward::before { content: "\ebfb"; }   /* alias of prev */
+.o9con-print::before { content: "\eb97"; }   /* alias of printer */
+.o9con-registered::before { content: "\ecf1"; }   /* alias of registered-trademark */
+.o9con-undo::before { content: "\ead0"; }   /* alias of rotate-left */
+.o9con-redo::before { content: "\eacb"; }   /* alias of rotate-right */
+.o9con-feed::before { content: "\eb84"; }   /* alias of rss */
+.o9con-rouble::before { content: "\ecf0"; }   /* alias of rub */
+.o9con-ruble::before { content: "\ecf0"; }   /* alias of rub */
+.o9con-mail-forward::before { content: "\eae1"; }   /* alias of share */
+.o9con-random::before { content: "\ebed"; }   /* alias of shuffle */
+.o9con-volume-off::before { content: "\ebec"; }   /* alias of speaker */
+.o9con-server::before { content: "\eb7d"; }   /* alias of stack */
+.o9con-star-half::before { content: "\eb31"; }   /* alias of star-half-o */
+.o9con-star-half-empty::before { content: "\eb31"; }   /* alias of star-half-o */
+.o9con-star-half-full::before { content: "\eb31"; }   /* alias of star-half-o */
+.o9con-thumbs-o-down::before { content: "\eb30"; }   /* alias of thumbs-down */
+.o9con-thumbs-o-up::before { content: "\eb2f"; }   /* alias of thumbs-up */
+.o9con-close-circle::before { content: "\ebc1"; }   /* alias of times-circle */
+.o9con-close-circle-o::before { content: "\ea7f"; }   /* alias of times-circle-o */
+.o9con-intersex::before { content: "\ed0f"; }   /* alias of transgender */
+.o9con-sitemap::before { content: "\eafe"; }   /* alias of tree-view */
+.o9con-search-plus::before { content: "\eaaf"; }   /* alias of zoom-in */
+.o9con-search-minus::before { content: "\eaad"; }   /* alias of zoom-out */

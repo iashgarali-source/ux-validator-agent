@@ -1,0 +1,22 @@
+{
+  "name": "ux-validator-agent",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev --workspace server",
+    "dev:client": "npm run dev --workspace client",
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "install:all": "npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "lucide-react": "^1.25.0",
+    "openai": "^6.47.0"
+  }
+}
